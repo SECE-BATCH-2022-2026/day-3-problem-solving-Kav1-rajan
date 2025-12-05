@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+class Program02{
+public static void main(String args[]){
+    Scanner scan=new Scanner(System.in);
+   
+    Integer n1=scan.nextInt();
+    Integer n2=scan.nextInt();
+    Integer n3=scan.nextInt();
+
+    System.out.print(Cal.calculateSum(n1,n2,n3));
+}
+}
+
+class Cal{
+public static Integer calculateSum(Integer n1,Integer n2,Integer n3){
+       if(n1==13){
+       	if(n3==13){
+       		return 0;
+       	}
+       	return n3;
+       }
+       else if(n2==13){
+       	  return n1;
+       }
+       else if(n3==13){
+       	  return n1+n2;
+       }
+       else{
+       	  return n1+n2+n3;
+       } 
+}
+}
